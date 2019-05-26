@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet"
-          href="../static/css/styles/monokai-sublime.css">
-    <script src="../static/js/highlight.pack.js"></script>
+          href="/static/css/styles/monokai-sublime.css">
+    <script src="/static/js/highlight.pack.js"></script>
     <script src="https://cdn.bootcss.com/jquery/3.4.1/core.js"></script>
     <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
     <script>
@@ -20,13 +20,13 @@
     </tr>
     <tr>
         <td>Title:</td>
-        <td colspan="2" id="title"></td>
+        <td colspan="2" id="title">{{.Title}}</td>
     </tr>
     <tr>
         <td colspan="3" style="text-align: left">
             <pre class='hljs'>
 <code id="code">
-
+{{.Code}}
 </code>
 </pre>
 
@@ -34,10 +34,10 @@
     </tr>
     <tr>
         <td id="language">
-            语言：
+            语言：{{.Language}}
         </td>
-        <td id="long">保留时常：一年</td>
-        <td id="time">生成日期：2019/5/26 0:14</td>
+        <td id="long">保留时常：{{.Long}}</td>
+        <td id="time">生成日期：{{.Time}}</td>
     </tr>
 </table>
 </body>

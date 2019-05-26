@@ -112,3 +112,4 @@ dmypy.json
 # project
 novel.db
 config.py
+*.db

@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <body>
 <table border="1" width="80%"  style="margin-left: 10%;margin-right: 10%;text-align: center">
-
+    <form action="/paste/" method="post">
     <tr>
         <td colspan="3" style="text-align: center;color:red;background: blue"><b>Erlink-Code</b></td>
     </tr>
@@ -15,7 +14,7 @@
         <td colspan="2"><input type="text" name="title" style="width:90%;" /></td>
     </tr>
     <tr>
-        <td colspan="3" style="text-align: left"><textarea style="width:99%;height:300px;"></textarea></td>
+        <td colspan="3" style="text-align: left"><textarea style="width:99%;height:300px;" name="code"></textarea></td>
     </tr>
     <tr>
         <td>
@@ -30,13 +29,15 @@
             </select>
         </td>
         <td>保留时常：<select name="long">
-                <option value ="volvo">缓存</option>
-                <option value ="saab">一天</option>
-                <option value="opel">一周</option>
-                <option value="audi">无限</option>
+{{/*                <option value ="cache">缓存</option>*/}}
+                <option value ="day">一天</option>
+                <option value="week">一周</option>
+{{/*                <option value="year">一年</option>*/}}
+                <option value="unlimited">无限</option>
             </select></td>
         <td><input type="submit" value="提交"></td>
     </tr>
+    </form>
 </table>
 </body>
 </html>
