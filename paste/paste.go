@@ -11,7 +11,7 @@ import (
 
 var e *echo.Echo
 
-func get(c echo.Context) error {
+func push(c echo.Context) error {
 	if c.Request().Method == "GET" {
 		return c.Render(http.StatusOK, "paste.get.html", nil)
 	} else if c.Request().Method == "POST" {
@@ -84,5 +84,5 @@ func Initialize(e2 *echo.Echo, db2 *gorm.DB) {
 	CreateTables()
 
 	e.GET("/paste/show/:hash", show)
-	e.Match([]string{"GET", "POST"}, "/paste/", get)
+	e.Match([]string{"GET", "POST"}, "/paste/push", push)
 }
